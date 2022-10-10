@@ -16,7 +16,7 @@
   },
   "lint-staged": {
     "packages/**/*.{tsx,ts,vue}": [
-      
+      "prettier -w ."
     ]
   },
   "config": {

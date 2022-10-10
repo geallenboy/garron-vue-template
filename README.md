@@ -1,9 +1,6 @@
-# 静态html
+# vue3 模版
 
- watson
 
-# 模版
+# vue3-vite-jsx
 
-react
-
-vue
+# vue3-vite-pinia-antd
