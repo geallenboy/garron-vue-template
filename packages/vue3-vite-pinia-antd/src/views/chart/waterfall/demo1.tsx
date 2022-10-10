@@ -18,23 +18,23 @@ export default defineComponent({
                   appendPadding: [15, 0, 0, 0],
                   meta: {
                     type: {
-                      alias: '类别',
+                      alias: '类别'
                     },
                     money: {
                       alias: '收支',
-                      formatter: (v) => `${v} 元`,
-                    },
+                      formatter: (v) => `${v} 元`
+                    }
                   },
                   label: {
                     style: { fontSize: 10, fill: 'rgba(0,0,0,0.65)' },
-                    layout: [{ type: 'interval-adjust-position' }],
+                    layout: [{ type: 'interval-adjust-position' }]
                   },
                   total: {
                     label: '总支出',
                     style: {
-                      fill: '#96a6a6',
-                    },
-                  },
+                      fill: '#96a6a6'
+                    }
+                  }
                 }}
                 data={_data1}
               />
@@ -50,16 +50,16 @@ export default defineComponent({
                   yField: 'value',
                   meta: {
                     month: {
-                      alias: '月份',
+                      alias: '月份'
                     },
                     value: {
                       alias: '销售量',
-                      formatter: (v) => `${v / 10000000} 亿`,
-                    },
+                      formatter: (v) => `${v / 10000000} 亿`
+                    }
                   },
                   /** 展示总计 */
                   total: {
-                    label: '2020',
+                    label: '2020'
                   },
                   color: ({ month, value }) => {
                     if (month === '2019' || month === '2020') {
@@ -73,23 +73,23 @@ export default defineComponent({
                       {
                         name: 'Increase',
                         value: 'increase',
-                        marker: { symbol: 'square', style: { r: 5, fill: '#f4664a' } },
+                        marker: { symbol: 'square', style: { r: 5, fill: '#f4664a' } }
                       },
                       {
                         name: 'Decrease',
                         value: 'decrease',
-                        marker: { symbol: 'square', style: { r: 5, fill: '#30bf78' } },
+                        marker: { symbol: 'square', style: { r: 5, fill: '#30bf78' } }
                       },
                       {
                         name: 'Total',
                         value: 'total',
-                        marker: { symbol: 'square', style: { r: 5, fill: '#96a6a6' } },
-                      },
-                    ],
+                        marker: { symbol: 'square', style: { r: 5, fill: '#96a6a6' } }
+                      }
+                    ]
                   },
                   label: {
                     style: {
-                      fontSize: 10,
+                      fontSize: 10
                     },
                     layout: [{ type: 'interval-adjust-position' }],
                     background: {
@@ -97,16 +97,16 @@ export default defineComponent({
                         fill: '#f6f6f6',
                         stroke: '#e6e6e6',
                         strokeOpacity: 0.65,
-                        radius: 2,
+                        radius: 2
                       },
-                      padding: 1.5,
-                    },
+                      padding: 1.5
+                    }
                   },
                   waterfallStyle: () => {
                     return {
-                      fillOpacity: 0.85,
+                      fillOpacity: 0.85
                     };
-                  },
+                  }
                 }}
                 data={_data2}
               />
@@ -115,5 +115,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

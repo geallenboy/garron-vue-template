@@ -13,19 +13,19 @@ export default defineComponent({
 
     onMounted(async () => {
       const data1 = await fetchApi(
-        'https://gw.alipayobjects.com/os/basement_prod/a719cd4e-bd40-4878-a4b4-df8a6b531dfe.json',
+        'https://gw.alipayobjects.com/os/basement_prod/a719cd4e-bd40-4878-a4b4-df8a6b531dfe.json'
       );
       list1.data = data1;
       const data2 = await fetchApi(
-        'https://gw.alipayobjects.com/os/bmw-prod/68d3f380-089e-4683-ab9e-4493200198f9.json',
+        'https://gw.alipayobjects.com/os/bmw-prod/68d3f380-089e-4683-ab9e-4493200198f9.json'
       );
       list2.data = data2;
       const data3 = await fetchApi(
-        'https://gw.alipayobjects.com/os/bmw-prod/68d3f380-089e-4683-ab9e-4493200198f9.json',
+        'https://gw.alipayobjects.com/os/bmw-prod/68d3f380-089e-4683-ab9e-4493200198f9.json'
       );
       list3.data = data3;
       const data4 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antvdemo/assets/data/heatmap.json',
+        'https://gw.alipayobjects.com/os/antvdemo/assets/data/heatmap.json'
       );
       list4.data = data4;
     });
@@ -45,9 +45,9 @@ export default defineComponent({
                   color: ['#174c83', '#7eb6d4', '#efefeb', '#efa759', '#9b4d16'],
                   meta: {
                     'Month of Year': {
-                      type: 'cat',
-                    },
-                  },
+                      type: 'cat'
+                    }
+                  }
                 }}
                 data={list1.data}
               />
@@ -68,9 +68,9 @@ export default defineComponent({
                   style: {
                     fill: '#fff',
                     shadowBlur: 2,
-                    shadowColor: 'rgba(0, 0, 0, .45)',
-                  },
-                },
+                    shadowColor: 'rgba(0, 0, 0, .45)'
+                  }
+                }
               }}
               data={list2.data}
             />
@@ -91,9 +91,9 @@ export default defineComponent({
                     style: {
                       fill: '#fff',
                       shadowBlur: 2,
-                      shadowColor: 'rgba(0, 0, 0, .45)',
-                    },
-                  },
+                      shadowColor: 'rgba(0, 0, 0, .45)'
+                    }
+                  }
                 }}
                 data={list3.data}
               />
@@ -109,16 +109,16 @@ export default defineComponent({
                   colorField: 'tmp',
                   color: '#F51D27-#FA541C-#FF8C12-#FFC838-#FAFFA8-#80FF73-#12CCCC-#1890FF-#6E32C2',
                   legend: {
-                    position: 'bottom',
+                    position: 'bottom'
                   },
                   annotations: [
                     {
                       type: 'image',
                       start: ['min', 'max'],
                       end: ['max', 'min'],
-                      src: 'https://gw.alipayobjects.com/zos/rmsportal/NeUTMwKtPcPxIFNTWZOZ.png',
-                    },
-                  ],
+                      src: 'https://gw.alipayobjects.com/zos/rmsportal/NeUTMwKtPcPxIFNTWZOZ.png'
+                    }
+                  ]
                 }}
                 data={list4.data}
               />
@@ -127,5 +127,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

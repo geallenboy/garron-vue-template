@@ -13,19 +13,19 @@ export default defineComponent({
 
     onMounted(async () => {
       const data1 = await fetchApi(
-        'https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json',
+        'https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json'
       );
       list1.data = data1;
       const data2 = await fetchApi(
-        'https://gw.alipayobjects.com/os/bmw-prod/55424a73-7cb8-4f79-b60d-3ab627ac5698.json',
+        'https://gw.alipayobjects.com/os/bmw-prod/55424a73-7cb8-4f79-b60d-3ab627ac5698.json'
       );
       list2.data = data2;
       const data3 = await fetchApi(
-        'https://gw.alipayobjects.com/os/bmw-prod/e00d52f4-2fa6-47ee-a0d7-105dd95bde20.json',
+        'https://gw.alipayobjects.com/os/bmw-prod/e00d52f4-2fa6-47ee-a0d7-105dd95bde20.json'
       );
       list3.data = data3;
       const data4 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/nHVKXA8ClI/multiple-measures-line-data.json',
+        'https://gw.alipayobjects.com/os/antfincdn/nHVKXA8ClI/multiple-measures-line-data.json'
       );
       list4.data = data4;
     });
@@ -43,14 +43,14 @@ export default defineComponent({
     };
     const meta = {
       date: {
-        alias: '销售日期',
+        alias: '销售日期'
       },
       price: {
-        alias: '单价',
+        alias: '单价'
       },
       discount_price: {
-        alias: '折扣单价',
-      },
+        alias: '折扣单价'
+      }
     };
     console.log(list1, 88888);
     return () => (
@@ -66,8 +66,8 @@ export default defineComponent({
                   smooth: true,
                   xAxis: {
                     // type: 'timeCat',
-                    tickCount: 5,
-                  },
+                    tickCount: 5
+                  }
                 }}
                 data={list1.data}
               />
@@ -83,14 +83,14 @@ export default defineComponent({
                     yField: 'value',
                     seriesField: 'category',
                     xAxis: {
-                      type: 'time',
+                      type: 'time'
                     },
                     yAxis: {
                       label: {
                         // 数值格式化为千分位
-                        formatter: (v) => `${v}`.replace(/\d{1,3}(?=(\d{3})+$)/g, (s) => `${s},`),
-                      },
-                    },
+                        formatter: (v) => `${v}`.replace(/\d{1,3}(?=(\d{3})+$)/g, (s) => `${s},`)
+                      }
+                    }
                   }}
                   data={list2.data}
                 />
@@ -112,25 +112,25 @@ export default defineComponent({
                     seriesField: 'name',
                     yAxis: {
                       label: {
-                        formatter: (v: string) => `${(Number(v) / 10e8).toFixed(1)} B`,
-                      },
+                        formatter: (v: string) => `${(Number(v) / 10e8).toFixed(1)} B`
+                      }
                     },
                     legend: {
-                      position: 'top',
+                      position: 'top'
                     },
                     smooth: true,
                     // 配置折线趋势填充
                     area: {
                       style: {
-                        fillOpacity: 0.55,
-                      },
+                        fillOpacity: 0.55
+                      }
                     },
                     animation: {
                       appear: {
                         animation: 'wave-in',
-                        duration: 3000,
-                      },
-                    },
+                        duration: 3000
+                      }
+                    }
                   }}
                   data={list3.data}
                 />
@@ -149,7 +149,7 @@ export default defineComponent({
                     xField: 'date',
                     yField: valueKey,
                     seriesField: seriesKey,
-                    appendPadding: [0, 8, 0, 0],
+                    appendPadding: [0, 8, 0, 0]
                   }}
                   data={processData(list4.data, ['price', 'discount_price'], meta)}
                 />
@@ -161,5 +161,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

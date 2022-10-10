@@ -19,9 +19,9 @@ export default defineComponent({
       if (containerWidth < textWidth) {
         scale = Math.min(
           Math.sqrt(
-            Math.abs(Math.pow(R, 2) / (Math.pow(textWidth / 2, 2) + Math.pow(textHeight, 2))),
+            Math.abs(Math.pow(R, 2) / (Math.pow(textWidth / 2, 2) + Math.pow(textHeight, 2)))
           ),
-          1,
+          1
         );
       }
       const textStyleStr = `width:${containerWidth}px;`;
@@ -49,10 +49,10 @@ export default defineComponent({
                       content: ({ percent }) => `${(percent * 100).toFixed(0)}%`,
                       style: {
                         fontSize: 14,
-                        textAlign: 'center',
-                      },
+                        textAlign: 'center'
+                      }
                     },
-                    interactions: [{ type: 'element-active' }],
+                    interactions: [{ type: 'element-active' }]
                   }}
                   data={list1.data}
                 />
@@ -74,9 +74,9 @@ export default defineComponent({
                     label: {
                       type: 'spider',
                       labelHeight: 28,
-                      content: '{name}\n{percentage}',
+                      content: '{name}\n{percentage}'
                     },
-                    interactions: [{ type: 'element-selected' }, { type: 'element-active' }],
+                    interactions: [{ type: 'element-selected' }, { type: 'element-active' }]
                   }}
                   data={list2.data}
                 />
@@ -104,12 +104,12 @@ export default defineComponent({
                       type: 'inner',
                       offset: '-8%',
                       content: '{name}',
-                      style: { fontSize: 18 },
+                      style: { fontSize: 18 }
                     },
                     interactions: [{ type: 'element-active' }],
                     pieStyle: {
-                      lineWidth: 0,
-                    },
+                      lineWidth: 0
+                    }
                   }}
                   data={list3.data}
                 />
@@ -130,17 +130,17 @@ export default defineComponent({
                     innerRadius: 0.64,
                     meta: {
                       value: {
-                        formatter: (v) => `${v} ¥`,
-                      },
+                        formatter: (v) => `${v} ¥`
+                      }
                     },
                     label: {
                       type: 'inner',
                       offset: '-50%',
                       style: {
-                        textAlign: 'center',
+                        textAlign: 'center'
                       },
                       autoRotate: false,
-                      content: '{value}',
+                      content: '{value}'
                     },
                     statistic: {
                       title: {
@@ -150,12 +150,12 @@ export default defineComponent({
                           const d = Math.sqrt(Math.pow(width / 2, 2) + Math.pow(height / 2, 2));
                           const text = datum ? datum.type : '总计';
                           return renderStatistic(d, text, { fontSize: 28 });
-                        },
+                        }
                       },
                       content: {
                         offsetY: 4,
                         style: {
-                          fontSize: '32px',
+                          fontSize: '32px'
                         },
                         customHtml: (container: any, view: any, datum: any, data: any) => {
                           const { width } = container.getBoundingClientRect();
@@ -164,15 +164,15 @@ export default defineComponent({
                             ? `¥ ${datum.value}`
                             : `¥ ${data.reduce((r: any, d: any) => r + d.value, 0)}`;
                           return renderStatistic(width, text, { fontSize: 32 });
-                        },
-                      },
+                        }
+                      }
                     },
                     // 添加 中心统计文本 交互
                     interactions: [
                       { type: 'element-selected' },
                       { type: 'element-active' },
-                      { type: 'pie-statistic-active' },
-                    ],
+                      { type: 'pie-statistic-active' }
+                    ]
                   }}
                   data={list4.data}
                 />
@@ -184,5 +184,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

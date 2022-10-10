@@ -1,5 +1,4 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import { Ref } from 'vue';
 
 export interface RequestOptions {
   /** 当前接口权限, 不需要鉴权的接口请忽略， */
@@ -20,7 +19,7 @@ const baseApiUrl = import.meta.env.VITE_BASE_API;
 const baseMockUrl = import.meta.env.VITE_MOCK_API;
 
 const service = axios.create({
-  timeout: 6000,
+  timeout: 6000
 });
 
 service.interceptors.request.use(
@@ -29,7 +28,7 @@ service.interceptors.request.use(
   },
   (error) => {
     Promise.reject(error);
-  },
+  }
 );
 
 service.interceptors.response.use(
@@ -51,7 +50,7 @@ service.interceptors.response.use(
     console.error(errMsg);
     error.message = errMsg;
     return Promise.reject(error);
-  },
+  }
 );
 
 export type Response<T = any> = {
@@ -70,7 +69,7 @@ export type BaseResponse<T = any> = Promise<Response<T>>;
  */
 export const request = <T = any>(
   config: AxiosRequestConfig,
-  options: RequestOptions = {},
+  options: RequestOptions = {}
 ): Promise<T> => {
   try {
     const { isMock = true } = options;

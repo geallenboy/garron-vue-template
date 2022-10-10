@@ -17,19 +17,19 @@ export default defineComponent({
     const list8 = reactive({ data: _data4 });
     onMounted(async () => {
       const data2 = await fetchApi(
-        'https://gw.alipayobjects.com/os/bmw-prod/be63e0a2-d2be-4c45-97fd-c00f752a66d4.json',
+        'https://gw.alipayobjects.com/os/bmw-prod/be63e0a2-d2be-4c45-97fd-c00f752a66d4.json'
       );
       list2.data = data2;
       const data3 = await fetchApi(
-        'https://gw.alipayobjects.com/os/bmw-prod/be63e0a2-d2be-4c45-97fd-c00f752a66d4.json',
+        'https://gw.alipayobjects.com/os/bmw-prod/be63e0a2-d2be-4c45-97fd-c00f752a66d4.json'
       );
       list3.data = data3;
       const data4 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/8elHX%26irfq/stack-column-data.json',
+        'https://gw.alipayobjects.com/os/antfincdn/8elHX%26irfq/stack-column-data.json'
       );
       list4.data = data4;
       const data6 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/cK%24sTxSsah/stack-group-column.json',
+        'https://gw.alipayobjects.com/os/antfincdn/cK%24sTxSsah/stack-group-column.json'
       );
       list6.data = data6;
     });
@@ -51,23 +51,23 @@ export default defineComponent({
                       // 配置样式
                       style: {
                         fill: '#FFFFFF',
-                        opacity: 0.6,
-                      },
+                        opacity: 0.6
+                      }
                     },
                     xAxis: {
                       label: {
                         autoHide: true,
-                        autoRotate: false,
-                      },
+                        autoRotate: false
+                      }
                     },
                     meta: {
                       type: {
-                        alias: '类别',
+                        alias: '类别'
                       },
                       sales: {
-                        alias: '销售额',
-                      },
-                    },
+                        alias: '销售额'
+                      }
+                    }
                   }}
                   data={list1.data}
                 />
@@ -86,13 +86,13 @@ export default defineComponent({
                     yField: '销售额',
                     xAxis: {
                       label: {
-                        autoRotate: false,
-                      },
+                        autoRotate: false
+                      }
                     },
                     slider: {
                       start: 0.1,
-                      end: 0.2,
-                    },
+                      end: 0.2
+                    }
                   }}
                   data={list2.data}
                 />
@@ -113,12 +113,12 @@ export default defineComponent({
                     yField: '销售额',
                     xAxis: {
                       label: {
-                        autoRotate: false,
-                      },
+                        autoRotate: false
+                      }
                     },
                     scrollbar: {
-                      type: 'horizontal',
-                    },
+                      type: 'horizontal'
+                    }
                   }}
                   data={list3.data}
                 />
@@ -147,9 +147,9 @@ export default defineComponent({
                         // 数据标签防遮挡
                         { type: 'interval-hide-overlap' },
                         // 数据标签文颜色自动调整
-                        { type: 'adjust-color' },
-                      ],
-                    },
+                        { type: 'adjust-color' }
+                      ]
+                    }
                   }}
                   data={list4.data}
                 />
@@ -184,9 +184,9 @@ export default defineComponent({
                         // 数据标签防遮挡
                         { type: 'interval-hide-overlap' },
                         // 数据标签文颜色自动调整
-                        { type: 'adjust-color' },
-                      ],
-                    },
+                        { type: 'adjust-color' }
+                      ]
+                    }
                   }}
                   data={list5.data}
                 />
@@ -206,7 +206,7 @@ export default defineComponent({
                     isGroup: true,
                     isStack: true,
                     seriesField: 'type',
-                    groupField: 'name',
+                    groupField: 'name'
                   }}
                   data={list6.data}
                 />
@@ -234,9 +234,9 @@ export default defineComponent({
                         return item.value.toFixed(2);
                       },
                       style: {
-                        fill: '#fff',
-                      },
-                    },
+                        fill: '#fff'
+                      }
+                    }
                   }}
                   data={list7.data}
                 />
@@ -256,8 +256,8 @@ export default defineComponent({
                     isRange: true,
                     label: {
                       position: 'middle',
-                      layout: [{ type: 'adjust-color' }],
-                    },
+                      layout: [{ type: 'adjust-color' }]
+                    }
                   }}
                   data={list8.data}
                 />
@@ -269,5 +269,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

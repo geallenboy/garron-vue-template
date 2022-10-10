@@ -9,7 +9,7 @@ import {
   uvData,
   transformData2,
   columnData,
-  lineData,
+  lineData
 } from './data';
 
 export default defineComponent({
@@ -17,8 +17,8 @@ export default defineComponent({
   setup() {
     const list1 = reactive({ data: _data1 });
     const list2 = reactive({ data: _data2 });
-    const list3 = reactive({ data: _data1 });
-    const list4 = reactive({ data: _data1 });
+    // const list3 = reactive({ data: _data1 });
+    // const list4 = reactive({ data: _data1 });
 
     return () => (
       <>
@@ -34,13 +34,13 @@ export default defineComponent({
                     geometryOptions: [
                       {
                         geometry: 'line',
-                        color: '#5B8FF9',
+                        color: '#5B8FF9'
                       },
                       {
                         geometry: 'line',
-                        color: '#5AD8A6',
-                      },
-                    ],
+                        color: '#5AD8A6'
+                      }
+                    ]
                   }}
                   data={[list1.data, list1.data]}
                 />
@@ -62,16 +62,16 @@ export default defineComponent({
                         seriesField: 'type',
                         lineStyle: {
                           lineWidth: 3,
-                          lineDash: [5, 5],
+                          lineDash: [5, 5]
                         },
-                        smooth: true,
+                        smooth: true
                       },
                       {
                         geometry: 'line',
                         seriesField: 'name',
-                        point: {},
-                      },
-                    ],
+                        point: {}
+                      }
+                    ]
                   }}
                   data={[uvBillData, transformData]}
                 />
@@ -90,15 +90,15 @@ export default defineComponent({
                     yField: ['value', 'count'],
                     geometryOptions: [
                       {
-                        geometry: 'column',
+                        geometry: 'column'
                       },
                       {
                         geometry: 'line',
                         lineStyle: {
-                          lineWidth: 2,
-                        },
-                      },
-                    ],
+                          lineWidth: 2
+                        }
+                      }
+                    ]
                   }}
                   data={[list2.data, list2.data]}
                 />
@@ -117,13 +117,13 @@ export default defineComponent({
                     geometryOptions: [
                       {
                         geometry: 'column',
-                        columnWidthRatio: 0.4,
+                        columnWidthRatio: 0.4
                       },
                       {
                         geometry: 'line',
-                        seriesField: 'name',
-                      },
-                    ],
+                        seriesField: 'name'
+                      }
+                    ]
                   }}
                   data={[uvData, transformData]}
                 />
@@ -143,12 +143,12 @@ export default defineComponent({
                     {
                       geometry: 'column',
                       isStack: true,
-                      seriesField: 'type',
+                      seriesField: 'type'
                     },
                     {
-                      geometry: 'line',
-                    },
-                  ],
+                      geometry: 'line'
+                    }
+                  ]
                 }}
                 data={[uvBillData, transformData2]}
               />
@@ -166,7 +166,7 @@ export default defineComponent({
                         geometry: 'column',
                         isStack: true,
                         seriesField: 'type',
-                        columnWidthRatio: 0.4,
+                        columnWidthRatio: 0.4
                       },
                       {
                         geometry: 'line',
@@ -175,15 +175,15 @@ export default defineComponent({
                           if (name === 'a') {
                             return {
                               lineDash: [1, 4],
-                              opacity: 1,
+                              opacity: 1
                             };
                           }
                           return {
-                            opacity: 0.5,
+                            opacity: 0.5
                           };
-                        },
-                      },
-                    ],
+                        }
+                      }
+                    ]
                   }}
                   data={[uvBillData, transformData]}
                 />
@@ -203,15 +203,15 @@ export default defineComponent({
                     {
                       geometry: 'column',
                       isGroup: true,
-                      seriesField: 'type',
+                      seriesField: 'type'
                     },
                     {
                       geometry: 'line',
                       lineStyle: {
-                        lineWidth: 2,
-                      },
-                    },
-                  ],
+                        lineWidth: 2
+                      }
+                    }
+                  ]
                 }}
                 data={[uvBillData, transformData2]}
               />
@@ -229,7 +229,7 @@ export default defineComponent({
                         geometry: 'column',
                         isGroup: true,
                         seriesField: 'type',
-                        columnWidthRatio: 0.4,
+                        columnWidthRatio: 0.4
                       },
                       {
                         geometry: 'line',
@@ -238,15 +238,15 @@ export default defineComponent({
                           if (name === 'a') {
                             return {
                               lineDash: [1, 4],
-                              opacity: 1,
+                              opacity: 1
                             };
                           }
                           return {
-                            opacity: 0.5,
+                            opacity: 0.5
                           };
-                        },
-                      },
-                    ],
+                        }
+                      }
+                    ]
                   }}
                   data={[uvBillData, transformData]}
                 />
@@ -268,15 +268,15 @@ export default defineComponent({
                       isGroup: true,
                       isStack: true,
                       seriesField: 'type',
-                      groupField: 'name',
+                      groupField: 'name'
                     },
                     {
                       geometry: 'line',
                       seriesField: 'name',
                       isStack: true,
-                      smooth: true,
-                    },
-                  ],
+                      smooth: true
+                    }
+                  ]
                 }}
                 data={[columnData, lineData]}
               />
@@ -285,5 +285,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

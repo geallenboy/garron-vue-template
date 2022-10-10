@@ -7,7 +7,7 @@ export const _data1 = [
   { year: '1996', value: 6, count: 35 },
   { year: '1997', value: 7, count: 7 },
   { year: '1998', value: 9, count: 1 },
-  { year: '1999', value: 13, count: 20 },
+  { year: '1999', value: 13, count: 20 }
 ];
 export const uvBillData = [
   { time: '2019-03', value: 350, type: 'uv' },
@@ -19,21 +19,21 @@ export const uvBillData = [
   { time: '2019-04', value: 300, type: 'bill' },
   { time: '2019-05', value: 250, type: 'bill' },
   { time: '2019-06', value: 220, type: 'bill' },
-  { time: '2019-07', value: 362, type: 'bill' },
+  { time: '2019-07', value: 362, type: 'bill' }
 ];
 export const uvData = [
   { time: '2019-03', value: 35 },
   { time: '2019-04', value: 90 },
   { time: '2019-05', value: 30 },
   { time: '2019-06', value: 45 },
-  { time: '2019-07', value: 47 },
+  { time: '2019-07', value: 47 }
 ];
 export const transformData2 = [
   { time: '2019-03', count: 800 },
   { time: '2019-04', count: 600 },
   { time: '2019-05', count: 400 },
   { time: '2019-06', count: 380 },
-  { time: '2019-07', count: 220 },
+  { time: '2019-07', count: 220 }
 ];
 export const transformData = [
   { time: '2019-03', count: 800, name: 'a' },
@@ -50,7 +50,7 @@ export const transformData = [
   { time: '2019-04', count: 600, name: 'c' },
   { time: '2019-05', count: 450, name: 'c' },
   { time: '2019-06', count: 300, name: 'c' },
-  { time: '2019-07', count: 200, name: 'c' },
+  { time: '2019-07', count: 200, name: 'c' }
 ];
 
 export const _data2 = [
@@ -58,7 +58,7 @@ export const _data2 = [
   { time: '2019-04', value: 900, count: 600 },
   { time: '2019-05', value: 300, count: 400 },
   { time: '2019-06', value: 450, count: 380 },
-  { time: '2019-07', value: 470, count: 220 },
+  { time: '2019-07', value: 470, count: 220 }
 ];
 
 export const columnData = [
@@ -78,7 +78,7 @@ export const columnData = [
   { name: 'London', month: 'Mar.', value: 5.9, type: '数学' },
   { name: 'Berlin', month: 'Mar.', value: 22.4, type: '美术' },
   { name: 'Berlin', month: 'Mar.', value: 32.4, type: '线性代数' },
-  { name: 'beijing', month: 'Mar.', value: 42.4, type: '高数' },
+  { name: 'beijing', month: 'Mar.', value: 42.4, type: '高数' }
 ];
 
 export const lineData = [
@@ -90,5 +90,5 @@ export const lineData = [
   { name: '新老师', month: 'Feb.', value: 15.4, type: '高数' },
   { name: '福老师', month: 'Mar.', value: 8.9, type: '美术' },
   { name: '逍老师', month: 'Mar.', value: 6.4, type: '线性代数' },
-  { name: '新老师', month: 'Mar.', value: 5.4, type: '高数' },
+  { name: '新老师', month: 'Mar.', value: 5.4, type: '高数' }
 ];

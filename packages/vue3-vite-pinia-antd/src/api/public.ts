@@ -6,7 +6,7 @@ import { request, BaseResponse } from '@/utils/request';
 export function userInfoApi<T>() {
   return request<BaseResponse<T>>({
     url: '/user/info',
-    method: 'get',
+    method: 'get'
   });
 }
 
@@ -16,6 +16,6 @@ export function userInfoApi<T>() {
 export function menuListApi() {
   return request<BaseResponse>({
     url: '/menu/list',
-    method: 'get',
+    method: 'get'
   });
 }

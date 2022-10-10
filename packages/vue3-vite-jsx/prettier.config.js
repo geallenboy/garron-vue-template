@@ -1,5 +1,7 @@
+
 const {prettierLint} = require('@garron/rule');
 
-module.exports = {
+module.exports ={
   ...prettierLint
-};
+}
+

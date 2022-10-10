@@ -1,11 +1,9 @@
 {
-  "name": "garron-template",
+  "name": "garron-vue-template",
   "private": true,
   "scripts": {
     "commit": "git add . && git-cz",
     "init": "pnpm install",
-    "lint:lint-staged": "lint-staged",
-    "lint:prettier": "prettier --write  \"packages/{vue3-vite-pinia-antd,vue3-vite-jsx}/src/*.{tsx,ts,vue}\"",
     "clear": "rimraf 'packages/*/node_modules' && rimraf node_modules",
     "changeset": "changeset",
     "build": "pnpm --filter=@garron/* run build",
@@ -14,17 +12,11 @@
     "release:only": "changeset publish --registry=https://registry.npmjs.com/",
     "prepare": "husky install"
   },
-  "lint-staged": {
-    "packages/{vue3-vite-pinia-antd,vue3-vite-jsx}/src/*.{tsx,ts,vue}": [
-      "prettier -w ."
-    ]
-  },
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
   },
-  
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.6",
     "@changesets/cli": "^2.24.4",
@@ -35,11 +27,7 @@
     "commitizen": "^4.2.5",
     "commitlint-config-cz": "^0.13.3",
     "cross-env": "^7.0.3",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1"
+    "cz-conventional-changelog": "^3.3.0"
   },
   "engines": {
     "node": ">=14"

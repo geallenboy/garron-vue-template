@@ -8,22 +8,22 @@ import './style.less';
 export default defineComponent({
   name: 'ChartTreemapDemo1',
   setup() {
-    const list1 = reactive({ data: [] });
+    // const list1 = reactive({ data: [] });
     const list2 = reactive({ data: [] });
     const list3 = reactive({ data: [] });
     const list4 = reactive({ data: [] });
 
     onMounted(async () => {
       const data2 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antvdemo/assets/data/mobile.json',
+        'https://gw.alipayobjects.com/os/antvdemo/assets/data/mobile.json'
       );
       list2.data = data2;
       const data3 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/k5SYI%24mOo1/treemap.json',
+        'https://gw.alipayobjects.com/os/antfincdn/k5SYI%24mOo1/treemap.json'
       );
       list3.data = data3;
       const data4 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antvdemo/assets/data/heatmap.json',
+        'https://gw.alipayobjects.com/os/antvdemo/assets/data/heatmap.json'
       );
       list4.data = data4;
     });
@@ -34,7 +34,7 @@ export default defineComponent({
             <Card title="基础矩形树图">
               <TreemapChart
                 {...{
-                  colorField: 'name',
+                  colorField: 'name'
                 }}
                 data={_data1}
               />
@@ -43,22 +43,21 @@ export default defineComponent({
           <Col span={12} class="pdr10">
             <Card title="嵌套矩形树图">
               <TreemapChart
-                {...{
+                {...({
                   colorField: 'brand',
-                  // 为矩形树图增加缩放,拖拽交互
                   interactions: [
                     {
-                      type: 'view-zoom',
+                      type: 'view-zoom'
                     },
                     {
-                      type: 'drag-move',
-                    },
+                      type: 'drag-move'
+                    }
                   ],
                   tooltip: {
                     follow: true,
                     enterable: true,
                     offset: 5,
-                    customContent: (value, items) => {
+                    customContent: (value: any, items: string | any[]) => {
                       if (!items || items.length <= 0) return;
                       const { data: itemData } = items[0];
                       const parent = itemData.path[1];
@@ -78,12 +77,12 @@ export default defineComponent({
                         ).toFixed(2)}%</span></div>` +
                         `</div>`
                       );
-                    },
-                  },
-                }}
+                    }
+                  }
+                } as any)}
                 data={{
                   name: 'root',
-                  children: list2.data,
+                  children: list2.data
                 }}
               />
             </Card>
@@ -96,16 +95,16 @@ export default defineComponent({
                 {...{
                   colorField: 'name',
                   legend: {
-                    position: 'top-left',
+                    position: 'top-left'
                   },
                   tooltip: {
                     formatter: (v) => {
                       const root = v.path[v.path.length - 1];
                       return {
                         name: v.name,
-                        value: `${v.value}(总占比${((v.value / root.value) * 100).toFixed(2)}%)`,
+                        value: `${v.value}(总占比${((v.value / root.value) * 100).toFixed(2)}%)`
                       };
-                    },
+                    }
                   },
                   // use `drilldown: { enabled: true }` to
                   // replace `interactions: [{ type: 'treemap-drill-down' }]`
@@ -117,7 +116,7 @@ export default defineComponent({
                   //   },
                   // },
                   // 开启动画
-                  animation: {},
+                  animation: {}
                 }}
                 data={list3.data}
               />
@@ -126,5 +125,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

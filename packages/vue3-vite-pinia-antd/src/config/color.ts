@@ -13,8 +13,8 @@ const Color = {
     disabledColor: 'rgba(0, 0, 0, 0.25)', // 失效色
     borderRadiusBase: '2px', // 组件/浮层圆角
     borderColorBase: '#d9d9d9', // 边框色
-    boxShadowBase: '0 2px 8px rgba(0, 0, 0, 0.15);', //
-  },
+    boxShadowBase: '0 2px 8px rgba(0, 0, 0, 0.15);' //
+  }
 };
 
 type ColorType = typeof Color;

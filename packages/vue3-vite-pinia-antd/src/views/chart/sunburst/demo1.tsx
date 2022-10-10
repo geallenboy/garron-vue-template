@@ -12,19 +12,19 @@ export default defineComponent({
     const list4 = reactive({ data: [] });
     onMounted(async () => {
       const data1 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/ryp44nvUYZ/coffee.json',
+        'https://gw.alipayobjects.com/os/antfincdn/ryp44nvUYZ/coffee.json'
       );
       list1.data = data1;
       const data2 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antvdemo/assets/data/sunburst.json',
+        'https://gw.alipayobjects.com/os/antvdemo/assets/data/sunburst.json'
       );
       list2.data = data2;
       const data3 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antvdemo/assets/data/sunburst.json',
+        'https://gw.alipayobjects.com/os/antvdemo/assets/data/sunburst.json'
       );
       list3.data = data3;
       const data4 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antvdemo/assets/data/sunburst.json',
+        'https://gw.alipayobjects.com/os/antvdemo/assets/data/sunburst.json'
       );
       list4.data = data4;
     });
@@ -37,7 +37,7 @@ export default defineComponent({
               <SunburstChart
                 {...{
                   innerRadius: 0.3,
-                  interactions: [{ type: 'element-active' }],
+                  interactions: [{ type: 'element-active' }]
                 }}
                 data={list1.data}
               />
@@ -50,13 +50,13 @@ export default defineComponent({
                   innerRadius: 0.3,
                   interactions: [{ type: 'element-active' }],
                   hierarchyConfig: {
-                    field: 'sum',
+                    field: 'sum'
                   },
                   drilldown: {
                     breadCrumb: {
-                      rootText: '起始',
-                    },
-                  },
+                      rootText: '起始'
+                    }
+                  }
                 }}
                 data={list2.data}
               />
@@ -72,12 +72,12 @@ export default defineComponent({
                   radius: 1,
                   interactions: [{ type: 'element-active' }],
                   hierarchyConfig: {
-                    field: 'sum',
+                    field: 'sum'
                   },
                   label: {
                     // label layout: limit label in shape, which means the labels out of shape will be hide
-                    layout: [{ type: 'limit-in-shape' }],
-                  },
+                    layout: [{ type: 'limit-in-shape' }]
+                  }
                 }}
                 data={list3.data}
               />
@@ -92,16 +92,16 @@ export default defineComponent({
                   hierarchyConfig: {
                     field: 'sum',
                     // 配置展示的层级数
-                    activeDepth: 1,
+                    activeDepth: 1
                   },
                   drilldown: {
                     breadCrumb: {
-                      rootText: '起始',
-                    },
+                      rootText: '起始'
+                    }
                   },
                   label: {
-                    autoRotate: false,
-                  },
+                    autoRotate: false
+                  }
                 }}
                 data={list4.data}
               />
@@ -110,5 +110,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

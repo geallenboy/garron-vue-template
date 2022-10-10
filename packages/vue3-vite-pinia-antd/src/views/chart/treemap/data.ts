@@ -20,6 +20,6 @@ export const _data1 = {
     { name: '分类 17', value: 40 },
     { name: '分类 18', value: 30 },
     { name: '分类 19', value: 28 },
-    { name: '分类 20', value: 16 },
-  ],
+    { name: '分类 20', value: 16 }
+  ]
 };

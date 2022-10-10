@@ -5,7 +5,7 @@ import {
   HomeOutlined,
   ShopOutlined,
   ClearOutlined,
-  DotChartOutlined,
+  DotChartOutlined
 } from '@ant-design/icons-vue';
 import { menuType } from '@/interface/public';
 import { RouterLink, useRoute } from 'vue-router';
@@ -29,13 +29,13 @@ export default defineComponent({
     const state = reactive({
       collapsed: false,
       selectedKeys: [router.path],
-      openKeys: getOpenKeys(menuList?.data),
+      openKeys: getOpenKeys(menuList?.data)
     });
     watch(
       () => router.path,
       (_val) => {
         state.selectedKeys = [_val];
-      },
+      }
     );
     const onCollapse = () => {
       state.collapsed = !state.collapsed;
@@ -90,5 +90,5 @@ export default defineComponent({
         </Menu>
       </Sider>
     );
-  },
+  }
 });

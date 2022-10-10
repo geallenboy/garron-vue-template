@@ -4,5 +4,5 @@ export default defineComponent({
   setup() {},
   render() {
     return <div>404</div>;
-  },
+  }
 });

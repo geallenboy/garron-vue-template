@@ -15,14 +15,14 @@ export default defineComponent({
                 {...{
                   xField: 'country',
                   xAxis: {
-                    position: 'bottom',
+                    position: 'bottom'
                   },
                   interactions: [{ type: 'active-region' }],
                   yField: ['2016年耕地总面积', '2016年转基因种植面积'],
                   tooltip: {
                     shared: true,
-                    showMarkers: false,
-                  },
+                    showMarkers: false
+                  }
                 }}
                 data={_data1}
               />
@@ -37,17 +37,17 @@ export default defineComponent({
                   yField: ['2016年耕地总面积', '2016年转基因种植面积'],
                   yAxis: {
                     '2016年耕地总面积': {
-                      nice: true,
+                      nice: true
                     },
                     '2016年转基因种植面积': {
                       min: 0,
-                      max: 100,
-                    },
+                      max: 100
+                    }
                   },
                   tooltip: {
                     shared: true,
-                    showMarkers: false,
-                  },
+                    showMarkers: false
+                  }
                 }}
                 data={_data1}
               />
@@ -56,5 +56,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

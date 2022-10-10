@@ -11,5 +11,5 @@ export default defineComponent({
         <Spin size={'large'} tip="页面加载中......" />
       </div>
     );
-  },
+  }
 });

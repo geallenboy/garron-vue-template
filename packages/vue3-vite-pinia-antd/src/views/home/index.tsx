@@ -1,5 +1,5 @@
 import { homeCardtab } from '@/api/home';
-import { Button, Col, Row, Tabs } from 'ant-design-vue';
+import { Col, Row, Tabs } from 'ant-design-vue';
 import { defineComponent, onMounted, reactive } from 'vue';
 import { LineChart } from '@garron/vue3-chart';
 import { CardTab } from './modules';
@@ -15,13 +15,13 @@ const data = [
   { year: '1996', value: 6 },
   { year: '1997', value: 7 },
   { year: '1998', value: 9 },
-  { year: '1999', value: 11 },
+  { year: '1999', value: 11 }
 ];
 
 export default defineComponent({
   setup() {
     const cardTabList = reactive({
-      list: [],
+      list: []
     });
     onMounted(async () => {
       const data = await homeCardtab();
@@ -32,7 +32,7 @@ export default defineComponent({
     const callback = (key: any) => {
       console.log(key);
     };
-    const operations = <Button>Extra Action</Button>;
+
     return () => (
       <div class={'home'}>
         <Row>
@@ -55,9 +55,9 @@ export default defineComponent({
                 smooth: true,
                 meta: {
                   value: {
-                    max: 15,
-                  },
-                },
+                    max: 15
+                  }
+                }
               }}
               data={data}
             />
@@ -68,5 +68,5 @@ export default defineComponent({
         </Tabs>
       </div>
     );
-  },
+  }
 });

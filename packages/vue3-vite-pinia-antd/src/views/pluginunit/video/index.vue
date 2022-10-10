@@ -7,32 +7,32 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, onMounted, onUnmounted } from 'vue';
-  import Player from 'xgplayer';
+import { ref, onMounted, onUnmounted } from 'vue';
+import Player from 'xgplayer';
 
-  const domRef = ref<HTMLElement>();
-  const player = ref<Player>();
+const domRef = ref<HTMLElement>();
+const player = ref<Player>();
 
-  function renderXgPlayer() {
-    const url =
-      'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4';
-    player.value = new Player({
-      el: domRef.value!,
-      url,
-      fitVideoSize: 'auto',
-      playbackRate: [0.5, 0.75, 1, 1.5, 2],
-    });
-  }
-  function destroyXgPlayer() {
-    player.value?.destroy();
-  }
-
-  onMounted(() => {
-    renderXgPlayer();
+function renderXgPlayer() {
+  const url =
+    'https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4';
+  player.value = new Player({
+    el: domRef.value!,
+    url,
+    fitVideoSize: 'auto',
+    playbackRate: [0.5, 0.75, 1, 1.5, 2]
   });
+}
+function destroyXgPlayer() {
+  player.value?.destroy();
+}
 
-  onUnmounted(() => {
-    destroyXgPlayer();
-  });
+onMounted(() => {
+  renderXgPlayer();
+});
+
+onUnmounted(() => {
+  destroyXgPlayer();
+});
 </script>
 <style scoped></style>

@@ -5,5 +5,5 @@ export default defineComponent({
   setup() {},
   render() {
     return <div>pluginunit-demo1</div>;
-  },
+  }
 });

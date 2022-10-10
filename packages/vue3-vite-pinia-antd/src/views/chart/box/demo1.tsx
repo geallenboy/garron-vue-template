@@ -18,9 +18,9 @@ export default defineComponent({
                   boxStyle: {
                     stroke: '#545454',
                     fill: '#1890FF',
-                    fillOpacity: 0.3,
+                    fillOpacity: 0.3
                   },
-                  animation: false,
+                  animation: false
                 }}
                 data={_data1}
               />
@@ -32,7 +32,7 @@ export default defineComponent({
                 {...{
                   xField: 'type',
                   yField: '_bin',
-                  groupField: 'Species',
+                  groupField: 'Species'
                 }}
                 data={_data2}
               />
@@ -48,8 +48,8 @@ export default defineComponent({
                   yField: ['low', 'q1', 'median', 'q3', 'high'],
                   outliersField: 'outliers',
                   outliersStyle: {
-                    fill: '#f6f',
-                  },
+                    fill: '#f6f'
+                  }
                 }}
                 data={_data3}
               />
@@ -63,30 +63,30 @@ export default defineComponent({
                   yField: ['low', 'q1', 'median', 'q3', 'high'],
                   meta: {
                     low: {
-                      alias: '最低值',
+                      alias: '最低值'
                     },
                     q1: {
-                      alias: '下四分位数',
+                      alias: '下四分位数'
                     },
                     median: {
-                      alias: '最低值',
+                      alias: '最低值'
                     },
                     q3: {
-                      alias: '上四分位数',
+                      alias: '上四分位数'
                     },
                     high: {
-                      alias: '最高值',
-                    },
+                      alias: '最高值'
+                    }
                   },
                   tooltip: {
-                    fields: ['high', 'q3', 'median', 'q1', 'low'],
+                    fields: ['high', 'q3', 'median', 'q1', 'low']
                   },
                   boxStyle: {
                     stroke: '#545454',
                     fill: '#1890FF',
-                    fillOpacity: 0.3,
+                    fillOpacity: 0.3
                   },
-                  animation: false,
+                  animation: false
                 }}
                 data={_data4}
               />
@@ -95,5 +95,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

@@ -12,5 +12,5 @@ export default defineComponent({
         <p>{userInfo.data.name}</p>
       </div>
     );
-  },
+  }
 });

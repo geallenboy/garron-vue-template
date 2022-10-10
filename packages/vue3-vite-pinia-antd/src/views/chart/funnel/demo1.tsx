@@ -15,7 +15,7 @@ export default defineComponent({
                 {...{
                   xField: 'stage',
                   yField: 'number',
-                  legend: false,
+                  legend: false
                 }}
                 data={_data1}
               />
@@ -30,21 +30,21 @@ export default defineComponent({
                   compareField: 'company',
                   meta: {
                     stage: {
-                      alias: '行为',
+                      alias: '行为'
                     },
                     pv: {
                       alias: '人数',
-                      formatter: (v) => `${v}次`,
-                    },
+                      formatter: (v) => `${v}次`
+                    }
                   },
                   tooltip: {
                     fields: ['stage', 'number', 'company'],
                     formatter: (v) => ({
                       name: `${v.company}的${v.stage}`,
-                      value: v.number,
-                    }),
+                      value: v.number
+                    })
                   },
-                  legend: false,
+                  legend: false
                 }}
                 data={_data2}
               />
@@ -61,14 +61,14 @@ export default defineComponent({
                   seriesField: 'company',
                   meta: {
                     stage: {
-                      alias: '行为',
+                      alias: '行为'
                     },
                     pv: {
                       alias: '人数',
-                      formatter: (v) => `${v}次`,
-                    },
+                      formatter: (v) => `${v}次`
+                    }
                   },
-                  legend: false,
+                  legend: false
                 }}
                 data={_data2}
               />
@@ -77,5 +77,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

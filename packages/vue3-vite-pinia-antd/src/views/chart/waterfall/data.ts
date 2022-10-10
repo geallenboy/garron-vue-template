@@ -5,7 +5,7 @@ export const _data1 = [
   { type: '水电费', money: 300 },
   { type: '房租', money: 1200 },
   { type: '商场消费', money: 1000 },
-  { type: '红包收入', money: -2000 },
+  { type: '红包收入', money: -2000 }
 ];
 
 export const _data2 = [
@@ -21,5 +21,5 @@ export const _data2 = [
   { month: 'Sep', value: 4200000 },
   { month: 'Oct', value: 5300000 },
   { month: 'Nov', value: -1500000 },
-  { month: 'Dec', value: 5100000 },
+  { month: 'Dec', value: 5100000 }
 ];

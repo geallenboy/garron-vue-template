@@ -16,7 +16,7 @@ export const usePublicStore = defineStore({
   id: 'user',
   state: (): userStateType => ({
     userInfo: { ...initState },
-    menu: { ...initState },
+    menu: { ...initState }
   }),
   getters: {
     getUserInfo(): initStoreType<UserState | null> {
@@ -24,7 +24,7 @@ export const usePublicStore = defineStore({
     },
     getMenu(): initStoreType<menuType | null> {
       return this.menu;
-    },
+    }
   },
   actions: {
     async userInfoAxios() {
@@ -40,6 +40,6 @@ export const usePublicStore = defineStore({
         this.menu = data;
         return data;
       } catch (error) {}
-    },
-  },
+    }
+  }
 });

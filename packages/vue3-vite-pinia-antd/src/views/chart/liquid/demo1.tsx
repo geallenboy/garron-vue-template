@@ -1,5 +1,5 @@
 import { Card, Col, Row } from 'ant-design-vue';
-import { defineComponent, reactive } from 'vue';
+import { defineComponent } from 'vue';
 import { LiquidChart } from '@garron/vue3-chart';
 
 export default defineComponent({
@@ -15,11 +15,11 @@ export default defineComponent({
                   percent: 0.25,
                   outline: {
                     border: 4,
-                    distance: 8,
+                    distance: 8
                   },
                   wave: {
-                    length: 128,
-                  },
+                    length: 128
+                  }
                 }}
               />
             </Card>
@@ -32,11 +32,11 @@ export default defineComponent({
                   shape: 'rect',
                   outline: {
                     border: 2,
-                    distance: 4,
+                    distance: 4
                   },
                   wave: {
-                    length: 128,
-                  },
+                    length: 128
+                  }
                 }}
               />
             </Card>
@@ -58,16 +58,16 @@ export default defineComponent({
                       ['A', r, r, 0, 0, 1, dx + width, dy + r * 2],
                       ['L', x, dy + height],
                       ['L', dx, dy + r * 2],
-                      ['Z'],
+                      ['Z']
                     ];
                   },
                   outline: {
                     border: 4,
-                    distance: 8,
+                    distance: 8
                   },
                   wave: {
-                    length: 128,
-                  },
+                    length: 128
+                  }
                 }}
               />
             </Card>
@@ -80,12 +80,12 @@ export default defineComponent({
                   shape: 'diamond',
                   outline: {
                     border: 4,
-                    distance: 8,
+                    distance: 8
                   },
                   wave: {
-                    length: 128,
+                    length: 128
                   },
-                  pattern: { type: 'line' },
+                  pattern: { type: 'line' }
                 }}
               />
             </Card>
@@ -93,5 +93,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

@@ -12,19 +12,19 @@ export default defineComponent({
     const list4 = reactive({ data: [] });
     onMounted(async () => {
       const data1 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/aao6XnO5pW/IMDB.json',
+        'https://gw.alipayobjects.com/os/antfincdn/aao6XnO5pW/IMDB.json'
       );
       list1.data = data1;
       const data2 = await fetchApi(
-        'https://gw.alipayobjects.com/os/bmw-prod/3e4db10a-9da1-4b44-80d8-c128f42764a8.json',
+        'https://gw.alipayobjects.com/os/bmw-prod/3e4db10a-9da1-4b44-80d8-c128f42764a8.json'
       );
       list2.data = data2;
       const data3 = await fetchApi(
-        'https://gw.alipayobjects.com/os/bmw-prod/0b37279d-1674-42b4-b285-29683747ad9a.json',
+        'https://gw.alipayobjects.com/os/bmw-prod/0b37279d-1674-42b4-b285-29683747ad9a.json'
       );
       list3.data = data3;
       const data4 = await fetchApi(
-        'https://gw.alipayobjects.com/os/bmw-prod/f950b2f1-038b-47c2-afcc-63001bc8d07c.json',
+        'https://gw.alipayobjects.com/os/bmw-prod/f950b2f1-038b-47c2-afcc-63001bc8d07c.json'
       );
       const processData = data4.map((item: any) => {
         item['年平均工资'] = item['Average annual wage'] * 1;
@@ -53,25 +53,25 @@ export default defineComponent({
                     nice: true,
                     line: {
                       style: {
-                        stroke: '#aaa',
-                      },
-                    },
+                        stroke: '#aaa'
+                      }
+                    }
                   },
                   xAxis: {
                     min: -100,
                     grid: {
                       line: {
                         style: {
-                          stroke: '#eee',
-                        },
-                      },
+                          stroke: '#eee'
+                        }
+                      }
                     },
                     line: {
                       style: {
-                        stroke: '#aaa',
-                      },
-                    },
-                  },
+                        stroke: '#aaa'
+                      }
+                    }
+                  }
                 }}
                 data={list1.data}
               />
@@ -88,31 +88,31 @@ export default defineComponent({
                   size: 5,
                   shape: 'circle',
                   pointStyle: {
-                    fillOpacity: 1,
+                    fillOpacity: 1
                   },
                   yAxis: {
                     nice: true,
                     line: {
                       style: {
-                        stroke: '#aaa',
-                      },
-                    },
+                        stroke: '#aaa'
+                      }
+                    }
                   },
                   xAxis: {
                     grid: {
                       line: {
                         style: {
-                          stroke: '#eee',
-                        },
-                      },
+                          stroke: '#eee'
+                        }
+                      }
                     },
                     line: {
                       style: {
-                        stroke: '#aaa',
-                      },
-                    },
+                        stroke: '#aaa'
+                      }
+                    }
                   },
-                  label: {},
+                  label: {}
                 }}
                 data={list2.data}
               />
@@ -134,7 +134,7 @@ export default defineComponent({
                   shape: 'circle',
                   pointStyle: {
                     fillOpacity: 0.8,
-                    stroke: '#bbb',
+                    stroke: '#bbb'
                   },
                   xAxis: {
                     min: -25,
@@ -142,41 +142,41 @@ export default defineComponent({
                     grid: {
                       line: {
                         style: {
-                          stroke: '#eee',
-                        },
-                      },
+                          stroke: '#eee'
+                        }
+                      }
                     },
                     line: {
                       style: {
-                        stroke: '#aaa',
-                      },
-                    },
+                        stroke: '#aaa'
+                      }
+                    }
                   },
                   yAxis: {
                     line: {
                       style: {
-                        stroke: '#aaa',
-                      },
-                    },
+                        stroke: '#aaa'
+                      }
+                    }
                   },
                   quadrant: {
                     xBaseline: 0,
                     yBaseline: 0,
                     labels: [
                       {
-                        content: 'Male decrease,\nfemale increase',
+                        content: 'Male decrease,\nfemale increase'
                       },
                       {
-                        content: 'Female decrease,\nmale increase',
+                        content: 'Female decrease,\nmale increase'
                       },
                       {
-                        content: 'Female & male decrease',
+                        content: 'Female & male decrease'
                       },
                       {
-                        content: 'Female &\n male increase',
-                      },
-                    ],
-                  },
+                        content: 'Female &\n male increase'
+                      }
+                    ]
+                  }
                 }}
                 data={list3.data}
               />
@@ -201,26 +201,26 @@ export default defineComponent({
                     label: {
                       formatter: (value: number) => {
                         return Math.floor(value / 1000) + 'K';
-                      },
+                      }
                     },
                     grid: {
                       line: {
                         style: {
-                          stroke: '#eee',
-                        },
-                      },
+                          stroke: '#eee'
+                        }
+                      }
                     },
                     line: {
                       style: {
-                        stroke: '#aaa',
-                      },
-                    },
+                        stroke: '#aaa'
+                      }
+                    }
                   },
                   tooltip: {
-                    fields: ['概率', '年平均工资', '就业人数'],
+                    fields: ['概率', '年平均工资', '就业人数']
                   },
                   legend: {
-                    position: 'top',
+                    position: 'top'
                   },
                   xAxis: {
                     min: -0.04,
@@ -229,12 +229,12 @@ export default defineComponent({
                     grid: {
                       line: {
                         style: {
-                          stroke: '#eee',
-                        },
-                      },
+                          stroke: '#eee'
+                        }
+                      }
                     },
                     line: false,
-                    label: false,
+                    label: false
                   },
                   label: {
                     formatter: (item: any) => {
@@ -242,7 +242,7 @@ export default defineComponent({
                         ? item['short occupation']
                         : '';
                     },
-                    offsetY: -10,
+                    offsetY: -10
                   },
                   annotations: [
                     {
@@ -250,8 +250,8 @@ export default defineComponent({
                       start: [-0.04, 100000],
                       end: [1.04, 30000],
                       style: {
-                        stroke: '#aaa',
-                      },
+                        stroke: '#aaa'
+                      }
                     },
                     {
                       type: 'text',
@@ -260,8 +260,8 @@ export default defineComponent({
                       style: {
                         textAlign: 'right',
                         fontWeight: '500',
-                        fill: 'rgb(92, 92, 92)',
-                      },
+                        fill: 'rgb(92, 92, 92)'
+                      }
                     },
                     {
                       type: 'text',
@@ -270,8 +270,8 @@ export default defineComponent({
                       style: {
                         textAlign: 'right',
                         fontWeight: '500',
-                        fill: 'rgb(92, 92, 92)',
-                      },
+                        fill: 'rgb(92, 92, 92)'
+                      }
                     },
                     {
                       type: 'text',
@@ -280,10 +280,10 @@ export default defineComponent({
                       style: {
                         textAlign: 'left',
                         fontWeight: '500',
-                        fill: 'rgb(92, 92, 92)',
-                      },
-                    },
-                  ],
+                        fill: 'rgb(92, 92, 92)'
+                      }
+                    }
+                  ]
                 }}
                 data={list4.data}
               />
@@ -292,5 +292,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

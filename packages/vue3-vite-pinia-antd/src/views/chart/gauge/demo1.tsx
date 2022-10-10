@@ -1,5 +1,5 @@
 import { Card, Col, Row } from 'ant-design-vue';
-import { defineComponent, reactive } from 'vue';
+import { defineComponent } from 'vue';
 import { GaugeChart } from '@garron/vue3-chart';
 
 export default defineComponent({
@@ -17,42 +17,42 @@ export default defineComponent({
                 {...{
                   percent: 0.75,
                   range: {
-                    color: '#30BF78',
+                    color: '#30BF78'
                   },
                   indicator: {
                     pointer: {
                       style: {
-                        stroke: '#D0D0D0',
-                      },
+                        stroke: '#D0D0D0'
+                      }
                     },
                     pin: {
                       style: {
-                        stroke: '#D0D0D0',
-                      },
-                    },
+                        stroke: '#D0D0D0'
+                      }
+                    }
                   },
                   axis: {
                     label: {
                       formatter(v) {
                         return Number(v) * 100;
-                      },
+                      }
                     },
                     subTickLine: {
-                      count: 3,
-                    },
+                      count: 3
+                    }
                   },
                   statistic: {
                     content: {
                       formatter: ({ percent }) => `Rate: ${(percent * 100).toFixed(0)}%`,
                       style: {
                         color: 'rgba(0,0,0,0.65)',
-                        fontSize: 48,
-                      },
-                    },
+                        fontSize: 48
+                      }
+                    }
                   },
                   gaugeStyle: {
-                    lineCap: 'round',
-                  },
+                    lineCap: 'round'
+                  }
                 }}
               />
             </Card>
@@ -63,7 +63,7 @@ export default defineComponent({
                 {...{
                   percent: 0.75,
                   range: {
-                    color: 'l(0) 0:#B8E1FF 1:#3D76DD',
+                    color: 'l(0) 0:#B8E1FF 1:#3D76DD'
                   },
                   startAngle: Math.PI,
                   endAngle: 2 * Math.PI,
@@ -73,22 +73,22 @@ export default defineComponent({
                       offsetY: -36,
                       style: {
                         fontSize: '36px',
-                        color: '#4B535E',
+                        color: '#4B535E'
                       },
-                      formatter: () => '70%',
+                      formatter: () => '70%'
                     },
                     content: {
                       style: {
                         fontSize: '24px',
                         lineHeight: '44px',
-                        color: '#4B535E',
+                        color: '#4B535E'
                       },
-                      formatter: () => '加载进度',
-                    },
+                      formatter: () => '加载进度'
+                    }
                   },
                   gaugeStyle: {
-                    lineCap: 'round',
-                  },
+                    lineCap: 'round'
+                  }
                 }}
               />
             </Card>
@@ -102,28 +102,28 @@ export default defineComponent({
                   percent: 0.75,
                   range: {
                     ticks: [0, 1 / 3, 2 / 3, 1],
-                    color: ['#F4664A', '#FAAD14', '#30BF78'],
+                    color: ['#F4664A', '#FAAD14', '#30BF78']
                   },
                   indicator: {
                     pointer: {
                       style: {
-                        stroke: '#D0D0D0',
-                      },
+                        stroke: '#D0D0D0'
+                      }
                     },
                     pin: {
                       style: {
-                        stroke: '#D0D0D0',
-                      },
-                    },
+                        stroke: '#D0D0D0'
+                      }
+                    }
                   },
                   statistic: {
                     content: {
                       style: {
                         fontSize: '36px',
-                        lineHeight: '36px',
-                      },
-                    },
-                  },
+                        lineHeight: '36px'
+                      }
+                    }
+                  }
                 }}
               />
             </Card>
@@ -135,19 +135,19 @@ export default defineComponent({
                   percent: 0.5,
                   range: {
                     ticks: [0, 1],
-                    color: ['l(0) 0:#F4664A 0.5:#FAAD14 1:#30BF78'],
+                    color: ['l(0) 0:#F4664A 0.5:#FAAD14 1:#30BF78']
                   },
                   indicator: {
                     pointer: {
                       style: {
-                        stroke: '#D0D0D0',
-                      },
+                        stroke: '#D0D0D0'
+                      }
                     },
                     pin: {
                       style: {
-                        stroke: '#D0D0D0',
-                      },
-                    },
+                        stroke: '#D0D0D0'
+                      }
+                    }
                   },
                   statistic: {
                     title: {
@@ -165,23 +165,19 @@ export default defineComponent({
                           fontSize: '36px',
                           lineHeight: 1,
                           color:
-                            percent < ticks[1]
-                              ? color[0]
-                              : percent < ticks[2]
-                              ? color[1]
-                              : color[2],
+                            percent < ticks[1] ? color[0] : percent < ticks[2] ? color[1] : color[2]
                         };
-                      },
+                      }
                     },
                     content: {
                       offsetY: 36,
                       style: {
                         fontSize: '24px',
-                        color: '#4B535E',
+                        color: '#4B535E'
                       },
-                      formatter: () => '系统表现',
-                    },
-                  },
+                      formatter: () => '系统表现'
+                    }
+                  }
                 }}
               />
             </Card>
@@ -189,5 +185,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

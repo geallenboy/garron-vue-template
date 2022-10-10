@@ -5,5 +5,5 @@ export const _data1 = [
   { name: 'L7', star: 2140 },
   { name: 'X6', star: 660 },
   { name: 'AVA', star: 885 },
-  { name: 'G2Plot', star: 1626 },
+  { name: 'G2Plot', star: 1626 }
 ];

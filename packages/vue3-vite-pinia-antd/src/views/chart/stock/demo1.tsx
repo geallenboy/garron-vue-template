@@ -13,15 +13,15 @@ export default defineComponent({
     const list4 = reactive({ data: [] });
     onMounted(async () => {
       const data1 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/qtQ9nYfYJe/stock-data.json',
+        'https://gw.alipayobjects.com/os/antfincdn/qtQ9nYfYJe/stock-data.json'
       );
       list1.data = data1;
       const data2 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/qtQ9nYfYJe/stock-data.json',
+        'https://gw.alipayobjects.com/os/antfincdn/qtQ9nYfYJe/stock-data.json'
       );
       list2.data = data2;
       const data3 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/ZWgtj7pC%261/stock.json',
+        'https://gw.alipayobjects.com/os/antfincdn/ZWgtj7pC%261/stock.json'
       );
       list3.data = data3;
     });
@@ -34,7 +34,7 @@ export default defineComponent({
               <StockChart
                 {...{
                   xField: 'trade_date',
-                  yField: ['open', 'close', 'high', 'low'],
+                  yField: ['open', 'close', 'high', 'low']
                 }}
                 data={list1.data}
               />
@@ -51,8 +51,8 @@ export default defineComponent({
                     open: { alias: '开盘价' },
                     close: { alias: '收盘价' },
                     high: { alias: '最高价' },
-                    low: { alias: '最低价' },
-                  },
+                    low: { alias: '最低价' }
+                  }
                 }}
                 data={list2.data}
               />
@@ -67,7 +67,7 @@ export default defineComponent({
                   appendPadding: [0, 10, 0, 0],
                   xField: 'trade_date',
                   yField: ['open', 'close', 'high', 'low'],
-                  slider: {},
+                  slider: {}
                 }}
                 data={list3.data}
               />
@@ -81,8 +81,8 @@ export default defineComponent({
                   yField: ['open', 'close', 'high', 'low'],
                   slider: {
                     start: 0.85,
-                    end: 0.86,
-                  },
+                    end: 0.86
+                  }
                 }}
                 data={list4.data}
               />
@@ -91,5 +91,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

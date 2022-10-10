@@ -1,4 +1,4 @@
-import { defineComponent, onMounted, reactive, ref, watch } from 'vue';
+import { defineComponent, onMounted, reactive } from 'vue';
 import { Layout } from 'ant-design-vue';
 import { RouterView } from 'vue-router';
 import HeaderPage from '@/layout/header';
@@ -13,10 +13,10 @@ const { Content } = Layout;
 export default defineComponent({
   setup() {
     const userState = reactive({
-      list: initState,
+      list: initState
     });
     const menuState = reactive({
-      list: initState,
+      list: initState
     });
     const publicStore = usePublicStore();
 
@@ -46,5 +46,5 @@ export default defineComponent({
         )}
       </>
     );
-  },
+  }
 });

@@ -14,19 +14,19 @@ export default defineComponent({
 
     onMounted(async () => {
       const data1 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json',
+        'https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json'
       );
       list1.data = data1;
       const data2 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json',
+        'https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json'
       );
       list2.data = data2;
       const data3 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json',
+        'https://gw.alipayobjects.com/os/antfincdn/svFjSfJkYy/radar.json'
       );
       list3.data = data3;
       const data4 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antvdemo/assets/data/heatmap.json',
+        'https://gw.alipayobjects.com/os/antvdemo/assets/data/heatmap.json'
       );
       list4.data = data4;
     });
@@ -45,23 +45,23 @@ export default defineComponent({
                       alias: 'star 数量',
                       min: 0,
                       nice: true,
-                      formatter: (v) => Number(v).toFixed(2),
-                    },
+                      formatter: (v) => Number(v).toFixed(2)
+                    }
                   },
                   xAxis: {
-                    tickLine: null,
+                    tickLine: null
                   },
                   yAxis: {
                     label: false,
                     grid: {
-                      alternateColor: 'rgba(0, 0, 0, 0.04)',
-                    },
+                      alternateColor: 'rgba(0, 0, 0, 0.04)'
+                    }
                   },
                   // 开启辅助点
                   point: {
-                    size: 2,
+                    size: 2
                   },
-                  area: {},
+                  area: {}
                 }}
                 data={_data1.map((d) => ({ ...d, star: Math.sqrt(d.star) }))}
               />
@@ -78,8 +78,8 @@ export default defineComponent({
                     score: {
                       alias: '分数',
                       min: 0,
-                      max: 80,
-                    },
+                      max: 80
+                    }
                   },
                   xAxis: {
                     line: null,
@@ -87,15 +87,15 @@ export default defineComponent({
                     grid: {
                       line: {
                         style: {
-                          lineDash: null,
-                        },
-                      },
-                    },
+                          lineDash: null
+                        }
+                      }
+                    }
                   },
                   // 开启辅助点
                   point: {
-                    size: 2,
-                  },
+                    size: 2
+                  }
                 }}
                 data={list1.data}
               />
@@ -114,8 +114,8 @@ export default defineComponent({
                     score: {
                       alias: '分数',
                       min: 0,
-                      max: 80,
-                    },
+                      max: 80
+                    }
                   },
                   xAxis: {
                     line: null,
@@ -123,10 +123,10 @@ export default defineComponent({
                     grid: {
                       line: {
                         style: {
-                          lineDash: null,
-                        },
-                      },
-                    },
+                          lineDash: null
+                        }
+                      }
+                    }
                   },
                   yAxis: {
                     line: null,
@@ -135,16 +135,16 @@ export default defineComponent({
                       line: {
                         type: 'line',
                         style: {
-                          lineDash: null,
-                        },
+                          lineDash: null
+                        }
                       },
-                      alternateColor: 'rgba(0, 0, 0, 0.04)',
-                    },
+                      alternateColor: 'rgba(0, 0, 0, 0.04)'
+                    }
                   },
                   // 开启辅助点
                   point: {
-                    size: 2,
-                  },
+                    size: 2
+                  }
                 }}
                 data={list2.data}
               />
@@ -161,8 +161,8 @@ export default defineComponent({
                     score: {
                       alias: '分数',
                       min: 0,
-                      max: 80,
-                    },
+                      max: 80
+                    }
                   },
                   xAxis: {
                     line: null,
@@ -170,17 +170,17 @@ export default defineComponent({
                     grid: {
                       line: {
                         style: {
-                          lineDash: null,
-                        },
-                      },
-                    },
+                          lineDash: null
+                        }
+                      }
+                    }
                   },
                   // 开启面积
                   area: {},
                   // 开启辅助点
                   point: {
-                    size: 2,
-                  },
+                    size: 2
+                  }
                 }}
                 data={list3.data}
               />
@@ -189,5 +189,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

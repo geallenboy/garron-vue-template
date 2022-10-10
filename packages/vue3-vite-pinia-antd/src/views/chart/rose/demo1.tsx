@@ -11,7 +11,7 @@ export default defineComponent({
 
     onMounted(async () => {
       const data1 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/XcLAPaQeeP/rose-data.json',
+        'https://gw.alipayobjects.com/os/antfincdn/XcLAPaQeeP/rose-data.json'
       );
       list1.data = data1;
     });
@@ -28,8 +28,8 @@ export default defineComponent({
                   seriesField: 'type',
                   radius: 0.9,
                   legend: {
-                    position: 'bottom',
-                  },
+                    position: 'bottom'
+                  }
                 }}
                 data={_data1}
               />
@@ -58,7 +58,7 @@ export default defineComponent({
                       '#FFDE94',
                       '#FFC741',
                       '#D09C10',
-                      '#795B16',
+                      '#795B16'
                     ],
                     paletteQualitative20: [
                       '#215B77',
@@ -77,9 +77,9 @@ export default defineComponent({
                       '#EDB40A',
                       '#D09C10',
                       '#A37B16',
-                      '#795B16',
-                    ],
-                  },
+                      '#795B16'
+                    ]
+                  }
                 }}
                 data={_data1}
               />
@@ -99,13 +99,13 @@ export default defineComponent({
                     seriesField: 'user',
                     radius: 0.9,
                     label: {
-                      offset: -15,
+                      offset: -15
                     },
                     interactions: [
                       {
-                        type: 'element-active',
-                      },
-                    ],
+                        type: 'element-active'
+                      }
+                    ]
                   }}
                   data={list1.data}
                 />
@@ -125,13 +125,13 @@ export default defineComponent({
                   seriesField: 'user',
                   radius: 0.9,
                   label: {
-                    offset: -15,
+                    offset: -15
                   },
                   interactions: [
                     {
-                      type: 'element-active',
-                    },
-                  ],
+                      type: 'element-active'
+                    }
+                  ]
                 }}
                 data={_data2}
               />
@@ -140,5 +140,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

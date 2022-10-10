@@ -11,7 +11,7 @@ export default defineComponent({
 
     onMounted(async () => {
       const data1 = await fetchApi(
-        'https://gw.alipayobjects.com/os/antfincdn/8elHX%26irfq/stack-column-data.json',
+        'https://gw.alipayobjects.com/os/antfincdn/8elHX%26irfq/stack-column-data.json'
       );
       list1.data = data1;
     });
@@ -29,8 +29,8 @@ export default defineComponent({
                   tooltip: {
                     formatter: (datum) => {
                       return { name: 'star数', value: datum.star };
-                    },
-                  },
+                    }
+                  }
                 }}
                 data={_data1}
               />
@@ -46,8 +46,8 @@ export default defineComponent({
                   radius: 0.8,
                   innerRadius: 0.2,
                   barStyle: {
-                    lineCap: 'round',
-                  },
+                    lineCap: 'round'
+                  }
                 }}
                 data={_data1}
               />
@@ -67,7 +67,7 @@ export default defineComponent({
                   tooltip: {
                     formatter: (datum) => {
                       return { name: 'star数', value: datum.star };
-                    },
+                    }
                   },
                   colorField: 'star',
                   color: ({ star }) => {
@@ -77,7 +77,7 @@ export default defineComponent({
                       return '#2194ff';
                     }
                     return '#ff4d4f';
-                  },
+                  }
                 }}
                 data={_data1}
               />
@@ -91,7 +91,7 @@ export default defineComponent({
                   yField: 'value',
                   colorField: 'type',
                   isGroup: true,
-                  maxAngle: 270,
+                  maxAngle: 270
                 }}
                 data={list1.data}
               />
@@ -111,7 +111,7 @@ export default defineComponent({
                   tooltip: {
                     formatter: (datum) => {
                       return { name: 'star数', value: datum.star };
-                    },
+                    }
                   },
                   colorField: 'star',
                   color: ({ star }) => {
@@ -136,9 +136,9 @@ export default defineComponent({
                          (w / 203) * 231
                        }" height="${w}" alt="" src="https://gw.alipayobjects.com/zos/antfincdn/zrh%24J08soH/AntV%252520LOGO%2525202.png">
                      </div>`;
-                      },
-                    },
-                  ],
+                      }
+                    }
+                  ]
                 }}
                 data={_data1}
               />
@@ -173,8 +173,8 @@ export default defineComponent({
                     src="${d.icon}"
                     alt=""
                   />
-                </div>`,
-                  })),
+                </div>`
+                  }))
                 }}
                 data={_data2}
               />
@@ -183,5 +183,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });

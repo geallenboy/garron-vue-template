@@ -26,8 +26,8 @@ export default defineComponent({
                     yField: 'year',
                     seriesField: 'year',
                     legend: {
-                      position: 'top-left',
-                    },
+                      position: 'top-left'
+                    }
                   }}
                   data={list1.data}
                 />
@@ -46,14 +46,14 @@ export default defineComponent({
                     yField: 'type',
                     meta: {
                       type: {
-                        alias: '类别',
+                        alias: '类别'
                       },
                       sales: {
-                        alias: '销售额',
-                      },
+                        alias: '销售额'
+                      }
                     },
                     minBarWidth: 20,
-                    maxBarWidth: 20,
+                    maxBarWidth: 20
                   }}
                   data={list2.data}
                 />
@@ -79,9 +79,9 @@ export default defineComponent({
                       layout: [
                         { type: 'interval-adjust-position' },
                         { type: 'interval-hide-overlap' },
-                        { type: 'adjust-color' },
-                      ],
-                    },
+                        { type: 'adjust-color' }
+                      ]
+                    }
                   }}
                   data={list3.data}
                 />
@@ -106,9 +106,9 @@ export default defineComponent({
                       layout: [
                         { type: 'interval-adjust-position' },
                         { type: 'interval-hide-overlap' },
-                        { type: 'adjust-color' },
-                      ],
-                    },
+                        { type: 'adjust-color' }
+                      ]
+                    }
                   }}
                   data={list4.data}
                 />
@@ -132,13 +132,13 @@ export default defineComponent({
                     isStack: true,
                     label: {
                       position: 'middle',
-                      content: (item:any) => {
+                      content: (item: any) => {
                         return item.value.toFixed(2);
                       },
                       style: {
-                        fill: '#fff',
-                      },
-                    },
+                        fill: '#fff'
+                      }
+                    }
                   }}
                   data={list5.data}
                 />
@@ -158,8 +158,8 @@ export default defineComponent({
                     isRange: true,
                     label: {
                       position: 'middle',
-                      layout: [{ type: 'adjust-color' }],
-                    },
+                      layout: [{ type: 'adjust-color' }]
+                    }
                   }}
                   data={list6.data}
                 />
@@ -171,5 +171,5 @@ export default defineComponent({
         </Row>
       </>
     );
-  },
+  }
 });
