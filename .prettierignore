@@ -1,0 +1,18 @@
+# 过滤prettier检测文件
+*.sh
+node_modules
+**/node_modules/**
+coverage
+*.md
+*.woff
+*.ttf
+.vscode
+.idea
+dist
+/public
+/docs
+.husky
+.local
+/bin
+.umi
+Dockerfile

@@ -1,33 +1,21 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-**/node_modules
-
+.DS_Store
+node_modules/
+dist/
+/npm-debug.log*
+/yarn-error.log
+/yarn.lock
+/package-lock.json
 
 # production
-/dist
+es/
+docs-dist/
+lib/
+cjs/
+# misc 
 
-# misc
-.DS_Store
-npm-debug.log*
-yarn-error.log
-.npmignore
-/coverage.
-.idea
-yarn.lock
-**/package-lock.json
-*bak
+coverage/
 
 
-# visual studio code
-.history
-*.log
-functions/*
-.temp/**
-
-
-# screenshot
-screenshot
-.firebase
-.eslintcache
-dist
+# ide
+/.vscode
+/.idea

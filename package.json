@@ -1,24 +1,60 @@
 {
-  "name": "awesome",
-  "version": "1.0.0",
+  "name": "garron-template",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git add . && git-cz",
+    "init": "pnpm install",
+    "lint:lint-staged": "lint-staged",
+    "lint:prettier": "prettier --write  \"packages/**/*.{tsx,vue}\"",
+    "clear": "rimraf 'packages/*/node_modules' && rimraf node_modules",
+    "changeset": "changeset",
+    "build": "pnpm --filter=@garron/* run build",
+    "version-packages": "changeset version",
+    "release": "pnpm --recursive --stream build && pnpm release:only",
+    "release:only": "changeset publish --registry=https://registry.npmjs.com/",
+    "prepare": "husky install"
   },
-  "keywords": [
-    "cli"
-  ],
-  "author": "allen",
-  "license": "ISC",
+  "lint-staged": {
+    "packages/**/*.{tsx,ts,vue}": [
+      
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  
   "devDependencies": {
-    "eslint": "^7.30.0",
-    "eslint-config-eslint": "^7.0.0",
-    "husky": "^4.2.5",
-    "lerna": "^3.20.2",
-    "lint-staged": "^10.1.7",
-    "prettier": "^2.0.5"
-  }
+    "@changesets/changelog-github": "^0.4.6",
+    "@changesets/cli": "^2.24.4",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@commitlint/cz-commitlint": "^17.1.2",
+    "@garron/rule": "^1.0.1",
+    "commitizen": "^4.2.5",
+    "commitlint-config-cz": "^0.13.3",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "packageManager": "pnpm@7.5.1"
 }
