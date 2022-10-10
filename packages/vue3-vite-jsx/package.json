@@ -16,7 +16,6 @@
     "vite",
     "tailwind",
     "tsx",
-    "pinia",
     "typescript"
   ],
   "license": "MIT",

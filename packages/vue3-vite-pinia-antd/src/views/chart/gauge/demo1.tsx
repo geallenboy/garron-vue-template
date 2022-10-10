@@ -33,7 +33,7 @@ export default defineComponent({
                   },
                   axis: {
                     label: {
-                      formatter(v) {
+                      formatter(v:number) {
                         return Number(v) * 100;
                       }
                     },
@@ -43,7 +43,7 @@ export default defineComponent({
                   },
                   statistic: {
                     content: {
-                      formatter: ({ percent }) => `Rate: ${(percent * 100).toFixed(0)}%`,
+                      formatter: ({ percent }:any) => `Rate: ${(percent * 100).toFixed(0)}%`,
                       style: {
                         color: 'rgba(0,0,0,0.65)',
                         fontSize: 48
@@ -53,7 +53,7 @@ export default defineComponent({
                   gaugeStyle: {
                     lineCap: 'round'
                   }
-                }}
+                } as any}
               />
             </Card>
           </Col>
@@ -151,7 +151,7 @@ export default defineComponent({
                   },
                   statistic: {
                     title: {
-                      formatter: ({ percent }) => {
+                      formatter: ({ percent }:any) => {
                         if (percent < ticks[1]) {
                           return '差';
                         }

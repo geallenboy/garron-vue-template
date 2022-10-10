@@ -12,10 +12,10 @@ const { Content } = Layout;
 
 export default defineComponent({
   setup() {
-    const userState = reactive({
+    const userState = reactive<any>({
       list: initState
     });
-    const menuState = reactive({
+    const menuState = reactive<any>({
       list: initState
     });
     const publicStore = usePublicStore();
