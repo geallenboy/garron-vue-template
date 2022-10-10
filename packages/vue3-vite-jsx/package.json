@@ -1,7 +1,7 @@
 {
-  "name": "@garron/vue3-vite-jsx",
+  "name": "@garron/vue3-vite3-jsx",
   "version": "1.0.0",
-  "description": "基于 vue3 vite2 jsx 基础模版",
+  "description": "基于 vue3 vite3 jsx 基础模版",
   "author": {
     "name": "geallenboy",
     "url": "https://github.com/geallenboy/garron-vue-template"
@@ -13,9 +13,8 @@
   "homepage": "https://github.com/geallenboy/garron-vue-template",
   "keywords": [
     "vue",
-    "vite2",
-    "ant-design-vue",
-    "vue3",
+    "vite",
+    "tailwind",
     "tsx",
     "pinia",
     "typescript"

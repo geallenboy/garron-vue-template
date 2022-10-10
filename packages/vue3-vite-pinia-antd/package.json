@@ -1,7 +1,7 @@
 {
-  "name": "@garron/vue3-vite2-pinia-antd",
+  "name": "@garron/vue3-vite3-pinia-antd",
   "version": "1.0.0",
-  "description": "基于 vue3 vite2 pinia antd 项目模版",
+  "description": "基于 vue3 vite3 pinia antd 项目模版",
   "scripts": {
     "serve": "npm run dev",
     "start": "vite",
@@ -74,7 +74,7 @@
   "keywords": [
     "vue",
     "ant-design-vue",
-    "vue3",
+    "tailwind",
     "ts",
     "tsx",
     "pinia",

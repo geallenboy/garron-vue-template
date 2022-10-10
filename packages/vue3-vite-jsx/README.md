@@ -1,11 +1,11 @@
 ## vite-vue3-jsx
 
-基于 vite2 vue3+jsx 开发前端基础项目框架
+基于 vue3+vite3+tsx+tailwind 开发前端基础项目框架
 
 ## 技术栈
 
 - 编程语言：[TypeScript 4.x](https://www.typescriptlang.org/zh/) + [JavaScript](https://www.javascript.com/)
-- 构建工具：[Vite 2.x](https://cn.vitejs.dev/)
+- 构建工具：[Vite 3.x](https://cn.vitejs.dev/)
 - 前端框架：[Vue 3.x](https://v3.cn.vuejs.org/)
 - 路由工具：[Vue Router 4.x](https://next.router.vuejs.org/zh/index.html)
 - CSS 预编译：[Less](http://lesscss.cn/)

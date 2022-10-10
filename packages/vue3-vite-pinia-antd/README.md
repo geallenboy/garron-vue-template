@@ -1,11 +1,11 @@
-## vite-vue3-jsx-pinia-antd
+## vue3-vite3-pinia-antd
 
-基于 vite2 vue3+jsx pinia antd 开发前端基础项目框架
+基于 vue3-vite3-pinia-antd 开发前端基础项目框架
 
 ## 技术栈
 
 - 编程语言：[TypeScript 4.x](https://www.typescriptlang.org/zh/) + [JavaScript](https://www.javascript.com/)
-- 构建工具：[Vite 2.x](https://cn.vitejs.dev/)
+- 构建工具：[Vite 3.x](https://cn.vitejs.dev/)
 - 前端框架：[Vue 3.x](https://v3.cn.vuejs.org/)
 - 路由工具：[Vue Router 4.x](https://next.router.vuejs.org/zh/index.html)
 - 状态管理：[pinia](https://pinia.vuejs.org/)
@@ -19,15 +19,7 @@
 
 ## 快速开始
 
-### 获取项目
 
-#### 使用 Git
-
-```sh
-
-git clone git@github.com:geallenboy/template-vue3-jsx-pinia-antd.git
-
-```
 
 ### 安装依赖
 
@@ -39,13 +31,13 @@ pnpm install
 ### 启动项目
 
 ```sh
-npm run start
+pnpm run start
 ```
 
 ### 项目打包
 
 ```sh
-npm run build
+pnpm run build
 ```
 
 ## Git 贡献提交规范

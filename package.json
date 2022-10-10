@@ -5,7 +5,7 @@
     "commit": "git add . && git-cz",
     "init": "pnpm install",
     "lint:lint-staged": "lint-staged",
-    "lint:prettier": "prettier --write  \"packages/**/*.{tsx,vue}\"",
+    "lint:prettier": "prettier --write  \"packages/{vue3-vite-pinia-antd,vue3-vite-jsx}/src/*.{tsx,ts,vue}\"",
     "clear": "rimraf 'packages/*/node_modules' && rimraf node_modules",
     "changeset": "changeset",
     "build": "pnpm --filter=@garron/* run build",
@@ -15,7 +15,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "packages/**/*.{tsx,ts,vue}": [
+    "packages/{vue3-vite-pinia-antd,vue3-vite-jsx}/src/*.{tsx,ts,vue}": [
       "prettier -w ."
     ]
   },
