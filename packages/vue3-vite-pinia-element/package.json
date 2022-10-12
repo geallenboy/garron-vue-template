@@ -1,5 +1,5 @@
 {
-  "name": "@garron/vue3-vite-element",
+  "name": "@garron/vue3-vite-pinia-element",
   "version": "1.0.0",
   "description": "基于 vite3 vue3 pinia element-plus后台管理",
   "keywords": [

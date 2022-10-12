@@ -1,9 +1,11 @@
-## vue3-vite-pinia-antd
+## vue3-vite-pinia-element
 
-基于 vue3-vite3-pinia-antd 开发前端基础项目框架
+基于  vite3 vue3 pinia element-plus 后台管理
 
 
 ## 快速开始
+
+### 获取项目
 
 #### 使用 Git
 
@@ -23,13 +25,13 @@ pnpm install
 ### 启动项目
 
 ```sh
-pnpm run start
+npm run start
 ```
 
 ### 项目打包
 
 ```sh
-pnpm run build
+npm run build
 ```
 
 ## Git 贡献提交规范
@@ -48,3 +50,4 @@ pnpm run build
   - ci 持续集成
   - types 类型定义文件更改
   - wip 开发中
+

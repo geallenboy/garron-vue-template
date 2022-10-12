@@ -79,6 +79,7 @@
   },
   "lint-staged": {
     "src/**.{vue,tsx,ts}": [
+      "eslint --cache --fix .",
       "prettier -w ."
     ]
   }
