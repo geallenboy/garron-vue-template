@@ -1,7 +1,27 @@
 {
   "name": "@garron/vue3-vite3-jsx",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "基于 vue3 vite3 jsx 基础模版",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "types": "es/index.d.ts",
+  "keywords": [
+    "vue",
+    "vite",
+    "tailwind",
+    "tsx",
+    "typescript"
+  ],
+  "files": [
+    "es",
+    "lib",
+    "dist",
+    "global.d.ts"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "author": {
     "name": "geallenboy",
     "url": "https://github.com/geallenboy/garron-vue-template"
@@ -11,14 +31,6 @@
     "url": "git@github.com:geallenboy/garron-vue-template.git"
   },
   "homepage": "https://github.com/geallenboy/garron-vue-template",
-  "keywords": [
-    "vue",
-    "vite",
-    "tailwind",
-    "tsx",
-    "typescript"
-  ],
-  "license": "MIT",
   "scripts": {
     "start": "vite",
     "build": "cross-env NODE_ENV=production vite build",

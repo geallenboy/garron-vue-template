@@ -6,17 +6,17 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: `${BASE_URL}`,
     name: 'home',
-    component: () => import(/* webpackChunkName: "home" */ '@/views/home')
+    component: () => import('@/views/home')
   },
   {
     path: `${BASE_URL}todo`,
     name: 'todo',
-    component: () => import(/* webpackChunkName: "todo" */ '@/views/todo')
+    component: () => import('@/views/todo')
   },
   {
     path: `${BASE_URL}about`,
     name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '@/views/about')
+    component: () => import('@/views/about')
   },
   {
     path: `${BASE_URL}result/page404`,
