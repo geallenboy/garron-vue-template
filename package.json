@@ -5,9 +5,9 @@
     "commit": "git add . && git-cz",
     "init": "pnpm install",
     "clear": "rimraf 'packages/*/node_modules' && rimraf node_modules",
-    "changeset": "changeset",
+    "changeset": "npx changeset",
     "build": "pnpm --filter=@garron/* run build",
-    "version-packages": "changeset version",
+    "version-packages": "npx changeset version",
     "release": "pnpm --recursive --stream build && pnpm release:only",
     "release:only": "changeset publish --registry=https://registry.npmjs.com/",
     "prepare": "husky install"

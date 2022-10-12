@@ -1,22 +1,14 @@
 {
   "name": "@garron/vue3-vite3-jsx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于 vue3 vite3 jsx 基础模版",
-  "main": "lib/index.js",
-  "module": "es/index.mjs",
-  "types": "es/index.d.ts",
+  "main": "src/main.js",
   "keywords": [
     "vue",
     "vite",
     "tailwind",
     "tsx",
     "typescript"
-  ],
-  "files": [
-    "es",
-    "lib",
-    "dist",
-    "global.d.ts"
   ],
   "license": "MIT",
   "publishConfig": {

@@ -1,6 +1,7 @@
 {
   "name": "@garron/vue3-vite3-pinia-antd",
-  "version": "1.0.1",
+  "version": "1.0.0",
+  "private": true,
   "description": "基于 vue3 vite3 pinia antd 项目模版",
   "scripts": {
     "serve": "npm run dev",
