@@ -1,6 +1,11 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.2.0/schema.json",
-  "changelog": "@changesets/cli/changelog",
+  "changelog": [
+    "@changesets/cli/changelog",
+    {
+      "repo": "geallenboy/garron-vue-template"
+    }
+  ],
   "commit": false,
   "fixed": [],
   "linked": [],

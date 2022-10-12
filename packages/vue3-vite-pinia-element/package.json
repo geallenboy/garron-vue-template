@@ -1,6 +1,6 @@
 {
   "name": "@garron/vue3-vite-pinia-element",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "基于 vite3 vue3 pinia element-plus后台管理",
   "keywords": [
     "vue",
@@ -56,7 +56,6 @@
     "url": "git@github.com:geallenboy/garron-vue-template.git"
   },
   "homepage": "https://github.com/geallenboy/garron-vue-template",
-  
   "engines": {
     "node": ">=14"
   }
