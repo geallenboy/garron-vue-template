@@ -3,6 +3,26 @@
   "version": "1.0.0",
   "private": true,
   "description": "基于 vue3 vite3 pinia antd 项目模版",
+  "main": "src/main.js",
+  "keywords": [
+    "vue",
+    "ant-design-vue",
+    "tailwind",
+    "ts",
+    "tsx",
+    "pinia",
+    "typescript"
+  ],
+  "author": {
+    "name": "geallenboy",
+    "url": "https://github.com/geallenboy/garron-vue-template"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:geallenboy/garron-vue-template.git"
+  },
+  "homepage": "https://github.com/geallenboy/garron-vue-template",
+  
   "scripts": {
     "serve": "npm run dev",
     "start": "vite",
@@ -63,24 +83,7 @@
     "vite-plugin-windicss": "^1.8.8",
     "vue-eslint-parser": "^8.2.0"
   },
-  "author": {
-    "name": "geallenboy",
-    "url": "https://github.com/geallenboy/garron-vue-template"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:geallenboy/garron-vue-template.git"
-  },
-  "homepage": "https://github.com/geallenboy/garron-vue-template",
-  "keywords": [
-    "vue",
-    "ant-design-vue",
-    "tailwind",
-    "ts",
-    "tsx",
-    "pinia",
-    "typescript"
-  ],
+  
   "license": "MIT",
   "engines": {
     "node": ">=14"

@@ -1,6 +1,7 @@
 {
   "name": "@garron/vue3-vite3-jsx",
   "version": "1.0.1",
+  "private": true,
   "description": "基于 vue3 vite3 jsx 基础模版",
   "main": "src/main.js",
   "keywords": [

@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "private": true,
   "description": "基于 vite3 vue3 pinia element-plus后台管理",
+  "main": "src/main.js",
   "keywords": [
     "vue",
     "element-plus",
