@@ -23,11 +23,12 @@
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@commitlint/cz-commitlint": "^17.1.2",
-    "@garron/rule": "^1.0.1",
+    "@garron/rule": "^1.0.2",
     "commitizen": "^4.2.5",
     "commitlint-config-cz": "^0.13.3",
     "cross-env": "^7.0.3",
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "rimraf": "^3.0.2"
   },
   "engines": {
     "node": ">=14"

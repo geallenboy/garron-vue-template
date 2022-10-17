@@ -37,7 +37,6 @@
   "dependencies": {
     "@ant-design/icons-vue": "^6.1.0",
     "@garron/vue3-chart": "^1.0.1",
-    "@opd/g2plot-vue": "^3.6.4",
     "@vueuse/core": "^9.3.0",
     "ant-design-vue": "3.2.13",
     "axios": "1.1.2",
