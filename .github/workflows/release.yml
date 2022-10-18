@@ -38,7 +38,7 @@ jobs:
       # https://pnpm.io/zh/cli/install#--frozen-lockfile
       # 下载依赖
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
       # build
       - name: Running build
       # 通过前面章节定义的命令行执行代码扫描
