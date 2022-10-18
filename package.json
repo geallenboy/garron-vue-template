@@ -7,10 +7,7 @@
     "clear": "rimraf 'packages/*/node_modules' && rimraf node_modules",
     "changeset": "npx changeset",
     "build": "pnpm --filter=@garron/vue3-vite-jsx run build",
-    "version-packages": "npx changeset version",
-    "release": "pnpm --recursive --stream build && pnpm release:only",
-    "release:only": "changeset publish --registry=https://registry.npmjs.com/",
-    "prepare": "husky install"
+    "version-packages": "npx changeset version"
   },
   "config": {
     "commitizen": {
