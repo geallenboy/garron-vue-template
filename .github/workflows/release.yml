@@ -53,7 +53,7 @@ jobs:
          user: ${{ secrets.GARRON_USER }}
          pass: ${{ secrets.GARRON_PASS }}
          connect_timeout: 10s
-         local: './dist/*'
+         local: './packages/vue3-vite-jsx/dist/*'
          remote: /www/wwwroot/vue1
          last_ssh: |
             nginx -s reload # 部署成功后需要重启nginx
