@@ -30,7 +30,7 @@
     "preview:dist": "npm run build && vite preview",
     "preview": "vite preview",
     "lint:lint-staged": "lint-staged",
-    "prepare": "husky install",
+  
     "lint:eslint": "eslint --cache --max-warnings 0 \"src/**/*.{vue,ts,tsx}\" --fix",
     "lint:prettier": "prettier --write  \"src/**/*.{ts,vue,tsx}\""
   },
