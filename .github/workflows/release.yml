@@ -39,16 +39,22 @@ jobs:
       # 下载依赖
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
-
-      # https://github.com/changesets/action
-      # 自动创建发布 PR 或 发布 npm
-      - name: Create Release Pull Request or Publish to npm
-        uses: changesets/action@v1
-        # 参数配置
-        with:
-          # 发布时执行什么命令
-          # publish: pnpm release
-        # 此步骤的环境变量，下一步讲解
+      # build
+      - name: Running build
+      # 通过前面章节定义的命令行执行代码扫描
+        run: cd packages/vue3-vite-jsx && pnpm run build
+      - name: Deploy 🚀
+        uses: cross-the-world/scp-pipeline@master
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WELCOME: "ssh scp ssh pipelines"
+          LASTSSH: "Doing something after copying"
+        with:
+         host: ${{ secrets.GARRON_HOST }}
+         user: ${{ secrets.GARRON_USER }}
+         pass: ${{ secrets.GARRON_PASS }}
+         connect_timeout: 10s
+         local: './dist/*'
+         remote: /www/wwwroot/vue1
+         last_ssh: |
+            nginx -s reload # 部署成功后需要重启nginx
+
