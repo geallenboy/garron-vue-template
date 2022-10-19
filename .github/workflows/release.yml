@@ -40,7 +40,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --no-frozen-lockfile
       # build
-      - name: Running build
+      - name: Running vue3-vite-jsx build 
       # 通过前面章节定义的命令行执行代码扫描
         run: cd packages/vue3-vite-jsx && pnpm run build
       - name: Deploy 🚀
@@ -54,7 +54,20 @@ jobs:
          pass: ${{ secrets.GARRON_PASS }}
          connect_timeout: 10s
          local: './packages/vue3-vite-jsx/dist/*'
-         remote: /www/wwwroot/vue1
-         last_ssh: |
-            nginx -s reload # 部署成功后需要重启nginx
-
+         remote: /www/wwwroot/vue-template/vue3-vite-jsx
+      # build
+      - name: Running vue3-vite-pinia-antd build 
+      # 通过前面章节定义的命令行执行代码扫描
+        run: cd packages/vue3-vite-pinia-antd && pnpm run build
+      - name: Deploy 🚀
+        uses: cross-the-world/scp-pipeline@master
+        env:
+          WELCOME: "ssh scp ssh pipelines"
+          LASTSSH: "Doing something after copying"
+        with:
+         host: ${{ secrets.GARRON_HOST }}
+         user: ${{ secrets.GARRON_USER }}
+         pass: ${{ secrets.GARRON_PASS }}
+         connect_timeout: 10s
+         local: './packages/vue3-vite-pinia-antd/dist/*'
+         remote: /www/wwwroot/vue-template/vue3-vite-pinia-antd
