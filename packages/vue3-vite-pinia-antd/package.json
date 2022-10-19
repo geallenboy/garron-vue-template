@@ -27,8 +27,8 @@
     "serve": "npm run dev",
     "start": "vite",
     "build": "cross-env NODE_ENV=production vite build",
-    "preview": "npm run build && vite preview",
-    "preview:dist": "vite preview",
+    "preview": "vite preview",
+    "preview:dist": "npm run build && vite preview",
     "lint:lint-staged": "lint-staged",
     "lint:eslint": "eslint --cache --max-warnings 0 \"src/**/*.{vue,ts,tsx}\" --fix",
     "lint:prettier": "prettier --write  \"src/**/*.{ts,tsx,vue}\""
